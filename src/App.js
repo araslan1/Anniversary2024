@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -13,6 +13,18 @@ function App() {
 
   const [is2024Book, set2024Book] = useState(false);
   const [year2024idx, set2024idx] = useState(0);
+  useEffect(() => {
+    if (bookIsOpen) {
+      document.body.style.backgroundColor = "lightcoral";
+    } else {
+      document.body.style.backgroundColor = "#222";
+    }
+
+    // Clean up the effect on component unmount
+    return () => {
+      document.body.style.backgroundColor = "#222";
+    };
+  }, [bookIsOpen]);
 
   const importAll = (r) => r.keys().map(r);
   const album2022 = importAll(require.context('../2022', false, /\.(png|jpe?g|svg)$/));
@@ -73,9 +85,13 @@ function App() {
   return (
     <>
       {!albumVisible && !bookIsOpen &&
+      <>
+      <h1 class = "specialtwo">Happy Anniversary Fiona!</h1>
+      <h1 class = "special" >Love You Willis</h1>
       <div className="heart-container">
         <div className="heart" onClick={switchToAlbum}></div>
       </div>
+      </>
       }
       {albumVisible && (
         <div className="AlbumContainer">

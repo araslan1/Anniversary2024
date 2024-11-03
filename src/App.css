@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .heart {
   background: red;
   position: relative;
@@ -287,14 +289,14 @@ h1 small {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  width: 400px;
-  margin: 20px auto;
+  width: 560px;
+  margin: 50px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .page {
   width: 100%;
-  height: 300px; /* Adjust height as needed */
+  height: 500px; /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,3 +335,28 @@ button:hover:not(:disabled) {
   background-color: #0056b3;
 }
 
+
+.specialtwo {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: lightcoral; 
+  font-size: 80px; 
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+.special {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: lightcoral; 
+  font-size: 80px; 
+  text-align: center; 
+  margin-top: 300px; 
+}
+
+
+h1 {
+  color: lightcoral; 
+}
